@@ -1,0 +1,8 @@
+{
+  "name": "vBank_cryptology",
+  "version": "1.0.0",
+  "dependencies": {
+    "jsencrypt": "^3.3.1",
+    "node-rsa": "^1.1.1"
+  }
+}

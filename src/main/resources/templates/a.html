@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Login</title>
+    <script th:src="@{https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{https://cdn.bootcdn.net/ajax/libs/jsencrypt/2.1.0/jsencrypt.min.js}"></script>
+    <script th:src="@{/static/crypto-js.min.js}"></script>
+    <script th:src="@{/static/sha1.js}"></script>
+    <script th:src="@{/static/RSA.js}"></script>
+    <script th:src="@{/static/Hybrid.js}"></script>
+<!--    <script type="text/javascript">-->
+<!--        const publicKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDMWfnBMLY1SbmgHbrDvFEZ/RIc\n" +-->
+<!--            "zdHvH8VfkrRqEB/8FVX+IPiuNy0Lr5SJjbRaUy2CLwwOyTbUsYEOqIb3j7R/MxpL\n" +-->
+<!--            "fkZ9ap66hiEtXwwu0pb23/T16lto5cLV87g0r1wi8dHbpEmuvWx8IaH+rOywns5g\n" +-->
+<!--            "zjjzX8vRZGZBOG41eQIDAQAB";-->
+
+<!--        const privateKey = "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAMxZ+cEwtjVJuaAd\n" +-->
+<!--            "usO8URn9EhzN0e8fxV+StGoQH/wVVf4g+K43LQuvlImNtFpTLYIvDA7JNtSxgQ6o\n" +-->
+<!--            "hvePtH8zGkt+Rn1qnrqGIS1fDC7Slvbf9PXqW2jlwtXzuDSvXCLx0dukSa69bHwh\n" +-->
+<!--            "of6s7LCezmDOOPNfy9FkZkE4bjV5AgMBAAECgYAYvGd0EC5uIt96Vz7tRJVYnP6d\n" +-->
+<!--            "R/i6hlEA8aQvFoaYoAiJu3n+tKUaPgWv5NxI9rqSgJloDMk7U8U4fgPgYZ/KcnJE\n" +-->
+<!--            "n8L5hehveywT1S59KZ6yRy5JpCHBsLWvNVZfUoGBZAEZYqH2yF8U9gSveGezRwS6\n" +-->
+<!--            "+ouHmgvt6DwU/jWeAQJBAPH1VEPZJdVLk1c+QFL22UBkicG5G8Xv5DYJbtsU9QyO\n" +-->
+<!--            "Sa0tT6L+tPa7FUiAY6tJVSuWHdZLUjLXa2Bn2BsIq0ECQQDYNfAH7+X+6hnNvCMP\n" +-->
+<!--            "K8BAyJ2HB4P3lXFwNEpgADKq0AviPCPYZSptyvL2YSmCS01K4bZ8tDdPf740ds25\n" +-->
+<!--            "XxQ5AkEA6bmtc3jwpfDCXJVCt6HCTQSRWbQBUxwfW9+S2UiOSlmsbAAIHJBkqK4h\n" +-->
+<!--            "qg5zuQM2pcr1+Yp61afoDpFhXQPrwQJBAKP2o4UhZOYgWlkvJ9dFcpKukOfpxyZm\n" +-->
+<!--            "6pQQ06ZiAAqRo7F5siVU8ww4MHCv1m689GypJ18CvD9JvNDEl9bQR+ECQFxG+0tC\n" +-->
+<!--            "gTrgJNY/y6p+Bnh5MStjHEwHNoN+d+gzjcl44LMhR16P/nJ8KGHdpe7E9v6WJAjl\n" +-->
+<!--            "ETKS7Al3+E6nINg=";-->
+
+<!--        $(function () {-->
+<!--            //实例化一个JSEncrypt对象-->
+<!--            var encrypt = new JSEncrypt();-->
+<!--            //设置公钥-->
+<!--            encrypt.setPublicKey(publicKey);-->
+<!--            //加密得到加密结果-->
+<!--            var encodeData = encrypt.encrypt("123456789");-->
+<!--            $("#btn").click(function () {-->
+<!--                $.ajax({-->
+<!--                    url: '/testRsa',-->
+<!--                    data: "pwd=" + encodeURI(encodeData).replace(/\+/g, '%2B'),  //+号的处理：因为数据在网络上传输时，非字母数字字符都将被替换成百分号（%）后跟两位十六进制数，而base64编码在传输到后端的时候，+会变成空格，因此先替换掉。后端再替换回来-->
+<!--                    type: 'post',-->
+<!--                    success: function (msg) {-->
+<!--                        alert(msg);-->
+<!--                    }-->
+<!--                });-->
+<!--            });-->
+
+<!--        });-->
+
+
+<!--    </script>-->
+</head>
+<body>
+<div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bank
+    username: root
+    password: zl304036
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+      static-path-pattern: /static/**
+39:
+  98:
+    46:
+      11:web:
+  resources:
+    static-locations: classpath:static/,classpath:/templates/
+

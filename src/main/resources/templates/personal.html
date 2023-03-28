@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta name="referrer" content="no-referrer" />
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+    <script th:src="@{https://code.jquery.com/jquery-3.1.1.min.js}"></script>
+    <script th:src="@{https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{https://cdn.bootcdn.net/ajax/libs/jsencrypt/2.1.0/jsencrypt.min.js}"></script>
+    <script th:src="@{/static/crypto-js.min.js}"></script>
+    <script th:src="@{/static/RSA.js}"></script>
+    <script th:src="@{/static/Hybrid.js}"></script>
+    <script th:src="@{/static/sha1.js}"></script>
+    <script th:src="@{/static/init.js}"></script>
+    <script th:src="@{/static/service.js}"></script>
+    <style type="text/css">
+        /* CSS Document */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .content {
+            width: 900px;
+            height: 500px;
+            margin: 200px auto 0 auto;
+            border-radius: 10px;
+            background-color: rgba(236, 236, 236, 0.59);
+            transition: all 1.0s;
+            /*box-shadow: 0px 0px 20px rgba(0,0,0,0.3);*/
+        }
+
+        .content img {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 150px 0 0 80px;
+            border-radius: 100px;
+
+        }
+
+        .content:hover {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.52);
+        }
+
+        .content_r {
+            float: right;
+            width: 500px;
+            margin: 80px 60px 0 0;
+            /*	background-color: pink;*/
+        }
+
+        .content_l {
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+
+        .content_l h5 {
+
+            font-size: 17px;
+        }
+
+        .cc {
+            margin-top: 10px;
+            color: #1F2023;
+            font-size: 18px;
+        }
+
+        .color_1 {
+            color: #4855EC;
+            font-size: 18px;
+        }
+
+        .deeppink {
+            color: deeppink;
+        }
+
+        .link a {
+            display: block;
+            float: left;
+            width: 120px;
+            height: 45px;
+            margin: 5px 5px 0 0;
+            /*	padding: 0 15px;*/
+            color: #fff;
+            line-height: 45px;
+            transition: all 0.8s;
+            /*	background-color: deeppink;*/
+
+        }
+
+        .link a:hover {
+            background-color: rgba(0, 201, 243, 0.35);
+        }
+
+    </style>
+</head>
+<body background="/static/img/VCG41453156437.jpg"
+      style="background-repeat:no-repeat;
+               background-attachment:fixed;
+               background-size:100% 100%; ">
+<div class="content">
+    <img src="/static/img/img.png" alt="">
+    <div class="content_r clearfix">
+        <div class="content_l clearfix">
+            <h2>Hi~  </h2>
+            <span id="username"></span>
+            <h2>Welcome here ！</h2>
+            <p class="cc">您的账户余额为:</p>
+            <p class="cc" id="balance"></p>
+            <br>
+            <p class="color_1">I am an ambitious salted fish!</p>
+            <p class="color_1">我是一位有野心的咸鱼!</p>
+            <br>
+            <p class="deeppink">只要路是对的，就不怕路远。</p>
+            <p class="deeppink">As long as the road is right, you are not afraid of the distance.</p>
+        </div>
+    </div>
+</div>
+<script>
+    update();
+</script>
+</body>
+</html>

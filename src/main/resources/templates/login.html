@@ -1,0 +1,31 @@
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta name="referrer" content="no-referrer" />
+    <title>欢迎登陆银行系统</title>
+    <script th:src="@{https://code.jquery.com/jquery-3.1.1.min.js}"></script>
+    <script th:src="@{https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{https://cdn.bootcdn.net/ajax/libs/jsencrypt/2.1.0/jsencrypt.min.js}"></script>
+    <script th:src="@{/static/crypto-js.min.js}"></script>
+    <script th:src="@{/static/RSA.js}"></script>
+    <script th:src="@{/static/Hybrid.js}"></script>
+    <script th:src="@{/static/sha1.js}"></script>
+    <script th:src="@{/static/init.js}"></script>
+    <link th:href="@{/static/login.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="center">
+        <h2>登录</h2>
+        <input id="username" type="text" placeholder="账号">
+        <input id="password" type="password" placeholder="密码">
+        <button class="submit_button" onclick="doLogin()">登录</button>
+        <h2>没有账号?</h2>
+        <button class="submit_button" onclick="SignIn()">创建一个</button>
+    </div>
+</div>
+
+
+</body>
+</html>
